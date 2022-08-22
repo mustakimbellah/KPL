@@ -1,8 +1,13 @@
 
+
+
 document.getElementById('player-calculate-btn').addEventListener('click', function () {
 
+
+    const value = getTextElementValueById('total-products');
+
     const playerInputField = getInputFieldValueById('player-inputField');
-    const totalPlayerCost = playerInputField * 5;
+    const totalPlayerCost = playerInputField * value;
 
     setTextElementValueById('player-cost-total', totalPlayerCost);
 
