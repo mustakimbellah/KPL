@@ -171,22 +171,25 @@
                   class="text-blue-900 font-bold w-15 h-10"
                   type="text"
                   name=""
-                  id=""
+                  id="player-inputField"
                 />
               </div>
               <button
+                id="player-calculate-btn"
                 class="my-5 px-14 bg-red-600 font-bold text-xl text-center"
               >
                 Calculate
               </button>
-              <h1 class="font-bold">Player Expenses : <span>$</span>00</h1>
+              <h2 class="font-bold">
+                Player Expenses: $ <span id="player-cost-total">00</span>
+              </h2>
               <div class="flex gap-2 my-5">
                 <h4 class="font-bold">Manager</h4>
                 <input
                   class="text-blue-900 font-bold w-15 h-10"
                   type="text"
-                  name="ns"
-                  id=""
+                  name=""
+                  id="managerInputField"
                 />
               </div>
               <div class="flex gap-7 my-5">
@@ -194,17 +197,20 @@
                 <input
                   class="text-blue-900 font-bold w-15 h-10"
                   type="text"
-                  name="ns"
-                  id=""
+                  name=""
+                  id="coachInputField"
                 />
               </div>
 
               <button
+                id="total-Cost-calculte-btn"
                 class="my-5 px-14 bg-red-600 font-bold text-xl text-center"
               >
                 Calculate Total
               </button>
-              <h1 class="font-bold">Total: <span>$</span></h1>
+              <h2 class="font-bold">
+                Total: $ <span id="total-cost-calculate">00</span>
+              </h2>
             </div>
           </div>
         </div>
@@ -223,3 +229,5 @@
     <script src="js/budget.js"></script>
   </body>
 </html>
+
+<!-- https://github.com/programming-hero-web-course2/best-five-dom-assignment-mustakimbellah -->
