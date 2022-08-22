@@ -30,6 +30,7 @@
       <section>
         <div class="flex w-100% mt-10 ml-14 mr-14 gap-7">
           <div class="w-60%">
+            <!-- x html start -->
             <div class="bg-red-100 grid grid-cols-3 gap-4 p-5">
               <div
                 class="max-w-sm rounded overflow-hidden shadow-lg bg-zinc-700"
@@ -40,15 +41,18 @@
                   alt=""
                 />
                 <div class="px-6 py-4 text-center">
-                  <div class="font-bold text-xl text-white mb-2 text-center">
+                  <h2 class="font-bold text-xl text-white mb-2 text-center">
                     Shakib Al Hasan
-                  </div>
+                  </h2>
 
-                  <button
-                    class="text-white my-5 px-6 bg-red-600 font-bold text-center"
-                  >
-                    SELECT
-                  </button>
+                  <div>
+                    <button
+                      class="text-white my-5 px-6 bg-red-600 font-bold text-center"
+                      onclick="addToCart(this)"
+                    >
+                      SELECT
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -61,14 +65,18 @@
                   alt=""
                 />
                 <div class="px-6 py-4 text-center">
-                  <div class="font-bold text-xl text-white mb-2">
+                  <h2 class="font-bold text-xl text-white mb-2 text-center">
                     Mohammad Saifuddin
+                  </h2>
+
+                  <div>
+                    <button
+                      class="text-white my-5 px-6 bg-red-600 font-bold text-center"
+                      onclick="addToCart(this)"
+                    >
+                      SELECT
+                    </button>
                   </div>
-                  <button
-                    class="text-white my-5 px-6 bg-red-600 font-bold text-center"
-                  >
-                    SELECT
-                  </button>
                 </div>
               </div>
 
@@ -81,14 +89,18 @@
                   alt=""
                 />
                 <div class="px-6 py-4 text-center">
-                  <div class="font-bold text-xl text-white mb-2">
+                  <h2 class="font-bold text-xl text-white mb-2 text-center">
                     Soumya Sarkar
+                  </h2>
+
+                  <div>
+                    <button
+                      class="text-white my-5 px-6 bg-red-600 font-bold text-center"
+                      onclick="addToCart(this)"
+                    >
+                      SELECT
+                    </button>
                   </div>
-                  <button
-                    class="text-white my-5 px-6 bg-red-600 font-bold text-center"
-                  >
-                    SELECT
-                  </button>
                 </div>
               </div>
 
@@ -101,14 +113,18 @@
                   alt=""
                 />
                 <div class="px-6 py-4 text-center">
-                  <div class="font-bold text-xl text-white mb-2">
+                  <h2 class="font-bold text-xl text-white mb-2 text-center">
                     Litton Das
+                  </h2>
+
+                  <div>
+                    <button
+                      class="text-white my-5 px-6 bg-red-600 font-bold text-center"
+                      onclick="addToCart(this)"
+                    >
+                      SELECT
+                    </button>
                   </div>
-                  <button
-                    class="text-white my-5 px-6 bg-red-600 font-bold text-center"
-                  >
-                    SELECT
-                  </button>
                 </div>
               </div>
 
@@ -121,14 +137,18 @@
                   alt=""
                 />
                 <div class="px-6 py-4 text-center">
-                  <div class="font-bold text-xl text-white mb-2">
+                  <h2 class="font-bold text-xl text-white mb-2 text-center">
                     Mashrafe Mortaza
+                  </h2>
+
+                  <div>
+                    <button
+                      class="text-white my-5 px-6 bg-red-600 font-bold text-center"
+                      onclick="addToCart(this)"
+                    >
+                      SELECT
+                    </button>
                   </div>
-                  <button
-                    class="text-white my-5 px-6 bg-red-600 font-bold text-center"
-                  >
-                    SELECT
-                  </button>
                 </div>
               </div>
 
@@ -141,27 +161,62 @@
                   alt=""
                 />
                 <div class="px-6 py-4 text-center">
-                  <div class="font-bold text-xl text-white mb-2">
+                  <h2 class="font-bold text-xl text-white mb-2 text-center">
                     Mustafizur Rahman
+                  </h2>
+
+                  <div>
+                    <button
+                      class="text-white my-5 px-6 bg-red-600 font-bold text-center"
+                      onclick="addToCart(this)"
+                    >
+                      SELECT
+                    </button>
                   </div>
-                  <button
-                    class="text-white my-5 px-6 bg-red-600 font-bold text-center"
-                  >
-                    SELECT
-                  </button>
                 </div>
               </div>
             </div>
+
+            <!-- html end -->
           </div>
           <div class="w-40%">
-            <div class="bg-slate-900 text-white p-10">
+            <!--  <div class="bg-slate-900 text-white p-10">
               <h2 class="text-2xl font-bold text-center mb-5">SELECT-FIVE</h2>
               <p class="text-left text-lg">1.</p>
               <p class="text-left text-lg">2.</p>
               <p class="text-left text-lg">3.</p>
               <p class="text-left text-lg">4.</p>
               <p class="text-left text-lg">5.</p>
+            </div> -->
+
+            <!-- start -->
+
+            <div>
+              <p class="text-4xl text-center">
+                Select-Five
+                <span id="total-products" class="text-blue-500">0</span>
+              </p>
+              <div class="overflow-x-auto">
+                <table class="table table-zebra w-full">
+                  <!-- head -->
+                  <!-- <thead>
+                    <tr>
+                      <th></th>
+                      <th>Product Name</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead> -->
+                  <tbody id="products-cart">
+                    <!-- <tr>
+                      <th>1</th>
+                      <td>Cy Ganderton</td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
             </div>
+
+            <!-- end -->
 
             <div class="mt-11 bg-slate-900 text-white p-10">
               <h1 class="text-4xl font-bold text-center mb-5">Budget</h1>
@@ -227,6 +282,7 @@
 
     <script src="js/common.js"></script>
     <script src="js/budget.js"></script>
+    <script src="js/selectFive.js"></script>
   </body>
 </html>
 

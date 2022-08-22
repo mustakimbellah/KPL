@@ -22,4 +22,5 @@ document.getElementById('total-Cost-calculte-btn').addEventListener('click', fun
     const totalCost = managetCost + coachCost + playerExpenses;
 
     setTextElementValueById('total-cost-calculate', totalCost);
+
 })
