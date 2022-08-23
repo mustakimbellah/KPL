@@ -5,16 +5,15 @@ function display(cartProduct) {
     const tableBody = document.getElementById('products-cart');
     tableBody.innerHTML = '';
 
-
-    for (let i = 0; i < cartProduct.length; i++) {
+    for (let i = 0; i < cartProduct.length && i < 5; i++) {
         console.log(playerArray[i].playerName);
-        if (i === 5) {         //i == 5
-            return;
-        }
-        else if (playerArray.length > 5) {
+
+        if (playerArray.length > 5) {
             alert("You are click more than five times");
+            return;
 
         }
+
         const name = playerArray[i].playerName;
 
         const tr = document.createElement('tr');
@@ -26,16 +25,14 @@ function display(cartProduct) {
         `;
         tableBody.appendChild(tr);
     }
-    // else if (playerArray.length > 5) {
-    //     alert("You are click more than five times");
-
-    // }
-
 
 }
 
 
 function addToCart(element) {
+
+    // element.setAttribute('disabled', true);
+    // element.classList.add('bg-white');
 
     const playerName = element.parentNode.parentNode.children[0].innerText;
 
@@ -44,15 +41,16 @@ function addToCart(element) {
 
     }
 
+    if (playerArray.length == 5) {
+        alert("You are click more than five times");
+        return;
+
+    }
+    element.setAttribute('disabled', true);
+    element.classList.add('bg-amber-800');
+
     playerArray.push(playerObj);
 
-    // if (i == 5) {
-    //     return;
-    // }
-    // if (playerArray.length > 5) {
-    //     alert("You are click more than five times");
-
-    // }
 
     document.getElementById('total-products').innerText = playerArray.length;
 
