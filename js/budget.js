@@ -5,7 +5,7 @@ document.getElementById('player-calculate-btn').addEventListener('click', functi
 
     const playerInputField = getInputFieldValueById('player-inputField');
     if (isNaN(playerInputField)) {
-        alert('Not Number');
+        alert('You can type only digit');
         return;
     }
 
@@ -19,14 +19,14 @@ document.getElementById('total-Cost-calculte-btn').addEventListener('click', fun
 
     const managetCost = getInputFieldValueById('managerInputField');
     if (isNaN(managetCost)) {
-        alert('Not Number');
+        alert('You can type only digit');
         return;
     }
 
     const coachCost = getInputFieldValueById('coachInputField');
 
     if (isNaN(coachCost)) {
-        alert('Not Number');
+        alert('You can type only digit');
         return;
     }
 
