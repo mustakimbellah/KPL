@@ -1,4 +1,3 @@
-//console.log('common file added')
 
 function getInputFieldValueById(inputId) {
     const inputField = document.getElementById(inputId);

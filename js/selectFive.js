@@ -11,11 +11,9 @@ function display(cartProduct) {
         if (playerArray.length > 5) {
             alert("You are click more than five times");
             return;
-
         }
 
         const name = playerArray[i].playerName;
-
         const tr = document.createElement('tr');
         tr.innerHTML = `
 
@@ -28,11 +26,7 @@ function display(cartProduct) {
 
 }
 
-
 function addToCart(element) {
-
-    // element.setAttribute('disabled', true);
-    // element.classList.add('bg-white');
 
     const playerName = element.parentNode.parentNode.children[0].innerText;
 
@@ -46,6 +40,7 @@ function addToCart(element) {
         return;
 
     }
+
     element.setAttribute('disabled', true);
     element.classList.add('bg-amber-800');
 
